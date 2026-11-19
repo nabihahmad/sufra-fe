@@ -81,7 +81,6 @@ function WeekMenu() {
   const [weeks, setWeeks] = useState<{ title: string; days: PlanDay[] }[]>([]);
   const [meals, setMeals] = useState<Meal[]>([]);
 
-  /*
   useEffect(() => {
     const today = new Date();
     Promise.all([getWeekPlan(today), getMeals()])
@@ -93,7 +92,6 @@ function WeekMenu() {
       })
       .catch(() => {});
   }, []);
-  */
 
   if (!weeks.length) return null;
   const todayStr = localDate();
